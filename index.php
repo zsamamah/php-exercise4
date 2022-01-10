@@ -40,20 +40,27 @@
     
     //3
     echo "<h1>3</h1>";
-    $v1 = 'A';
-    $v2 = 'B';
-    for($i=0;$i<5;$i++){
-        echo "<p>";
-        for($j=0;$j<5;$j++){
-            if($i===0)
-                echo "A ";
-        }
-        echo "</p>";
+    $str3 = 'A';
+    for($i=1;$i<=5;$i++){
+        for($j=5-$i;$j>0;$j--)
+            echo "A ";
+            for($k=1;$k<=$i;$k++)
+                echo "$str3 ";
+        echo "<br>";
+        $str3++;
     }
 
     //4
     echo "<h1>4</h1>";
-    
+    $str3 = 1;
+    for($i=1;$i<=5;$i++){
+        for($j=5-$i;$j>0;$j--)
+            echo "1 ";
+            for($k=1;$k<=$i;$k++)
+                echo "$str3 ";
+        echo "<br>";
+        $str3++;
+    }
 
     //5
     echo "<h1>5</h1>";
@@ -127,13 +134,33 @@
     //11
     echo "<h1>11</h1>";
     $num11=1;
-  for($i=1;$i<=5;$i++) {
+    for($i=1;$i<=5;$i++) {
     for($j=1;$j<=$i;$j++) {
-      echo "$num11 "; 
-      $num11++;
+        echo "$num11 "; 
+        $num11++;
     }
     echo "<br>"; 
-  }
+}
+    //12
+    echo "<h1>12</h1>";
+    for($i=1;$i<=5;$i++){
+        $str12 = 'A';
+        for($j=1;$j<=$i;$j++){
+            echo "$str12 ";
+            $str12++;
+        }
+        echo "<br>";
+        if($i===5){
+            for($k=4;$k>0;$k--){
+                $str12='A';
+                for($z=1;$z<=$k;$z++){
+                    echo "$str12 ";
+                    $str12++;
+                }
+                echo "<br>";
+            }
+        }
+    }
 
 
 
